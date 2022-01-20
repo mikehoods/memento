@@ -30,7 +30,5 @@ styles = StyleSheet.create({
         overflow: 'hidden',
         paddingHorizontal: 18,
         paddingVertical: 12,
-        position: 'absolute',
-        top: 200
     }
 })

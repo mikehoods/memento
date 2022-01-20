@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
 import { AppForm, AppFormField, SubmitButton } from '../components/forms';
+import colors from '../config/colors';
 import Logo from '../components/Logo';
 import Screen from '../components/Screen';
 
@@ -11,7 +12,7 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required().min(6).label("Password")
 })
 
-function LoginScreen(props) {
+function RegisterScreen(props) {
     return (
         <Screen style={styles.screen}>
             <Logo />
@@ -38,7 +39,7 @@ function LoginScreen(props) {
                     secureTextEntry
                     textContentType="password"
                 />
-                <SubmitButton name="Login" />
+                <SubmitButton color={colors.secondary} name="Register" />
             </AppForm>
         </Screen>
     );
@@ -51,4 +52,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginScreen;
+export default RegisterScreen;

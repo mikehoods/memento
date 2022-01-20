@@ -7,6 +7,7 @@ import navigationTheme from './app/navigation/navigationTheme';
 import AppNavigator from './app/navigation/AppNavigator';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import LoginScreen from './app/screens/LoginScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
       {/* <NavigationContainer theme={navigationTheme}>
         <AppNavigator />
       </NavigationContainer> */}
-      <LoginScreen />
+      <RegisterScreen />
     </Screen>
   );
 }

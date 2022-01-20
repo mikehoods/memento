@@ -1,15 +1,14 @@
 import React from 'react';
-import { Platform, StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-import colors from '../config/colors';
-import defaultStyles from '../config/colors';
+import defaultStyles from '../../config/styles';
 
 function AppTextInput({ icon, placeholder, ...otherprops }) {
     return (
         <View style={styles.container}>
             {icon && <FontAwesome5 
-                color={colors.secondary} 
+                color={defaultStyles.colors.secondary} 
                 name={icon} 
                 size={20}
                 style={styles.icon}
@@ -26,7 +25,7 @@ function AppTextInput({ icon, placeholder, ...otherprops }) {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        backgroundColor: colors.light,
+        backgroundColor: defaultStyles.colors.light,
         borderRadius: 25,
         flexDirection: 'row',
         marginVertical: 12,
