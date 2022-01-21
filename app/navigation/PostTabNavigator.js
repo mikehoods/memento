@@ -11,14 +11,17 @@ const Tab = createBottomTabNavigator();
 const PostTabNavigator = () => (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name="PostDetails" component={PostDetailsScreen} options={{
-            tabBarIcon: ({ size, color }) => <FontAwesome5 name="home" color={color} size={size} />
+            tabBarIcon: ({ size, color }) => <FontAwesome5 name="home" color={color} size={size} />,
+            title: "Post"
         }}
         />
-        <Tab.Screen name="Edit Post" component={EditPostScreen} options={{
-            tabBarIcon: ({ size, color }) => <FontAwesome5 name="edit" color={color} size={size} />
+        <Tab.Screen name="EditPost" component={EditPostScreen} options={{
+            tabBarIcon: ({ size, color }) => <FontAwesome5 name="edit" color={color} size={size} />,
+            title: "Edit"
         }}/>
-        <Tab.Screen name="Delete Post" component={WelcomeScreen} options={{
-            tabBarIcon: ({ size, color }) => <FontAwesome5 name="trash" color={color} size={size} />
+        <Tab.Screen name="DeletePost" component={WelcomeScreen} options={{
+            tabBarIcon: ({ size, color }) => <FontAwesome5 name="trash" color={color} size={size} />,
+            title: "Delete"
         }} />
     </Tab.Navigator>
 )

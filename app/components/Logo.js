@@ -1,25 +1,24 @@
 import React from 'react'
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
+import AppText from './AppText';
 import colors from '../config/colors';
 
-export default function Logo() {
+export default function Logo({ style }) {
     return (
-        <View style={styles.logoContainer}>
+        <View style={[styles.logoContainer, style]}>
             <FontAwesome5 color={colors.primary} name='book' size={50} />
-            <Text style={styles.appName}>Memento</Text>
+            <AppText style={styles.appName}>Memento</AppText>
        </View>
     )
 }
 
 styles = StyleSheet.create({
     appName: {
-        color: colors.dark,
-        fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
-        fontSize: 28,
+        fontSize: 30,
         fontWeight: '700',
-        marginLeft: 12
+        marginLeft: 10
     },
     logoContainer: {
         alignItems: 'center',
@@ -28,7 +27,9 @@ styles = StyleSheet.create({
         borderRadius: 37,
         flexDirection: 'row',
         overflow: 'hidden',
-        paddingHorizontal: 18,
-        paddingVertical: 12,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        position: 'absolute',
+        top: 125
     }
 })

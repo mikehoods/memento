@@ -1,7 +1,7 @@
 export default Object.freeze({
-    POSTS_LIST: 'Posts List',
+    POSTS_LIST: 'PostsList',
     POST_DETAILS: 'PostDetails',
-    POST_EDIT: 'Post Edit',
+    POST_EDIT: 'EditPost',
     LOGIN: 'Login',
     REGISTER: 'Register'
 })

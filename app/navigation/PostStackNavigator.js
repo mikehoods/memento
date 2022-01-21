@@ -8,8 +8,10 @@ const Stack = createStackNavigator();
 
 const PostStackNavigator = () => (
     <Stack.Navigator>
-        <Stack.Screen name='Posts List' component={PostList} options={{ headerShown: false }}/>
-        <Stack.Screen name='PostDetails' component={PostTabNavigator} />
+        <Stack.Screen name='PostsList' component={PostList} options={{ headerShown: false, title: "Posts" }}/>
+        <Stack.Screen name='PostDetails' component={PostTabNavigator} options={{
+            title: ""
+        }}/>
     </Stack.Navigator>
 
 )
