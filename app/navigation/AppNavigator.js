@@ -4,13 +4,13 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import AccountScreen from '../screens/AccountScreen';
 import AddPostScreen from '../screens/AddPostScreen';
-import PostStackNavigator from './PostStackNavigator';
+import PostList from '../components/PostList';
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name='PostsStack' component={PostStackNavigator} options={{
+        <Tab.Screen name='PostsList' component={PostList} options={{
             tabBarIcon: ({ size, color }) => <FontAwesome5 name="home" color={color} size={size} />,
             title: "Posts"
         }}/>

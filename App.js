@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Screen from './app/components/Screen';
+import PostStackNavigator from './app/navigation/PostStackNavigator';
 import PostTabNavigator from './app/navigation/PostTabNavigator';
 import navigationTheme from './app/navigation/navigationTheme';
 import AppNavigator from './app/navigation/AppNavigator';
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <Screen>
       <NavigationContainer theme={navigationTheme}>
-        <AppNavigator />
+        <PostStackNavigator />
         {/* <AuthNavigator /> */}
       </NavigationContainer>
     </Screen>
